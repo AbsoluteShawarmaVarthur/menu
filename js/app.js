@@ -71,7 +71,7 @@ function App() {
                 : "🚚 Delivery: Porter (Customer Pays)\n";
 
         window.open(
-            `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`,
+            `https://wa.me/918660466183?text=${encodeURIComponent(msg)}`,
             "_blank"
         );
     };
