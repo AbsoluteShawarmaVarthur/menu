@@ -26,14 +26,8 @@ const MENU = [
         categoryId: "absolute_combo",
         categoryName: "Absolute Combo",
         addons: [
-            { id: "high_protein", name: "Make it High Protein", price: 40 },
-            { id: "jumbo", name: "Make it Jumbo", price: 30 },
+            { id: "meal", name: "Make it a Meal", price: 80 },
             { id: "cheesy", name: "Make it Cheesy", price: 30 },
-            { id: "tandoori", name: "Make it Tandoori", price: 20 },
-            { id: "mexican", name: "Make it Mexican", price: 10 },
-            { id: "spicy", name: "Make it Spicy", price: 10 },
-            { id: "peri_peri", name: "Make it Peri Peri", price: 10 },
-            { id: "blue", name: "Make it Blue", price: 10 },
         ],
         items: [
             { id: "sunday", name: "Sunday - Arabian Sandwich + Loaded Fries + Pulpy Grape", price: 250 },
