@@ -1,5 +1,9 @@
+const UPI_ID = "Q999752846@ybl";
+const WHATSAPP_NUMBER = "8660466183";
+
 function App() {
     const [cart, setCart] = React.useState({});
+    const [locationLink, setLocationLink] = React.useState("");
 
     const updateQty = (key, delta) => {
         setCart((prev) => {
@@ -65,13 +69,24 @@ function App() {
         });
 
         msg += `\nSubtotal: ₹${getTotal()}\n`;
+
+        msg += `\n📍 Delivery Location:\n`;
+        msg += locationLink
+          ? locationLink + "\n"
+          : "Not provided\n";
+        
         msg +=
             getTotal() >= 999
                 ? "🚚 Delivery: Porter FREE\n"
                 : "🚚 Delivery: Porter (Customer Pays)\n";
 
+        msg += `\n💳 Payment Details:\n`;
+        msg += `UPI ID: ${UPI_ID}\n`;
+        msg += `Please share payment screenshot after paying.\n`;
+
+
         window.open(
-            `https://wa.me/918660466183?text=${encodeURIComponent(msg)}`,
+            `https://wa.me/91${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
             "_blank"
         );
     };
@@ -106,6 +121,23 @@ function App() {
                 ))}
             </div>
 
+            <div className="mb-3">
+              <label className="form-label fw-semibold">
+                📍 Delivery Location (Paste Google Maps link)
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="https://maps.google.com/..."
+                value={locationLink}
+                onChange={(e) => setLocationLink(e.target.value)}
+              />
+              <small className="text-muted">
+                Open Google Maps → Share → Copy link → Paste here
+              </small>
+            </div>
+
+                            
             <div className="card my-3">
                 <div className="card-body">
                     <strong>Total: ₹{getTotal()}</strong>
