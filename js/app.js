@@ -80,6 +80,19 @@ function App() {
         <div className="container py-4">
             <h3 className="text-center mb-4">Absolute Shawarma 🌯</h3>
 
+            <div className="text-center mb-4">
+                <small className="text-muted">
+                  Revisit menu:{" "}
+                  <a
+                    href="https://bit.ly/absVarthur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    bit.ly/absVarthur
+                  </a>
+                </small>
+              </div>
+
             <div className="accordion">
                 {MENU.map((category, idx) => (
                     <Category
